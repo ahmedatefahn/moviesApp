@@ -1,4 +1,4 @@
-import { loading, success, fail } from '../utils/actionTypes'
+import { loading, success, fail, reset } from '../utils/actionTypes'
  
  var  initialState={
      loading:false,
@@ -11,6 +11,7 @@ import { loading, success, fail } from '../utils/actionTypes'
         case loading:return {...state,loading:true};
         case success:return {data:[...state.data,...action.payload],loading:false};
         case fail:return {...state,loading:false};
+        case reset:return {data:[],loading:false};
 
         default:return state;
     }

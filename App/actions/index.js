@@ -1,10 +1,13 @@
 import axios from "axios";
 import { baseUrl, apiKey } from '../utils/constants'
-import { loading, success, fail } from '../utils/actionTypes'
+import { loading, success, fail,reset } from '../utils/actionTypes'
 
 export const getData = ({ page, refresh = false }) => {
   let url = baseUrl + `person/popular?api_key=${apiKey}&language=en-US&page=${page}`
   return async dispatch => {
+    if(refresh)
+    dispatch(refreshList())
+
     try {
       dispatch(loadingStart())
 
@@ -38,5 +41,10 @@ const dataSuccess = value => (
 const failRequest = () => (
   {
     type: fail,
+  }
+)
+const refreshList = () => (
+  {
+    type: reset,
   }
 )

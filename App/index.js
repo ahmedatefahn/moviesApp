@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import reducers from './reducers';
 import Splash from './Screens/Splash';
 import Home from './Screens/Home';
+import PersonDetails from './Screens/PersonDetails';
 import Navigation from './utils/Navigation'
 const store = createStore(reducers, applyMiddleware(thunk));
 
@@ -17,6 +18,7 @@ const MainStack = () => {
     <Main.Navigator headerMode={false}>
       <Main.Screen name={'Splash'} component={Splash} />
       <Main.Screen name={'Home'} component={Home} />
+      <Main.Screen name={'PersonDetails'} component={PersonDetails} />
     </Main.Navigator>
   )
 }
