@@ -1,6 +1,7 @@
 import axios from "axios";
 import { baseUrl, apiKey } from '../utils/constants'
 import { loading, success, fail,reset } from '../utils/actionTypes'
+import Toast from 'react-native-simple-toast';
 
 export const getData = ({ page, refresh = false }) => {
   let url = baseUrl + `person/popular?api_key=${apiKey}&language=en-US&page=${page}`
@@ -22,6 +23,8 @@ export const getData = ({ page, refresh = false }) => {
     catch (e) {
       console.log(e.response)
       dispatch(failRequest())
+      Toast.show('connection error', Toast.SHORT);
+
 
     }
   }

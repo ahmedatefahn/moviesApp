@@ -7,6 +7,7 @@ import { styles } from './styles'
 import InfoItem from '../../components/InfoItem'
 import { log } from 'react-native-reanimated';
 import GridView from '../../components/GrdView';
+import Navigation from '../../utils/Navigation';
 export default class PersonDetails extends React.Component {
     constructor(props) {
         super(props)
@@ -52,7 +53,9 @@ getPersonImages(id){
 
                 <MainHeader title={item?.name} />
                 <ScrollView>
+                    <TouchableOpacity onPress={()=>Navigation.navigate('Images',{item:item.profile_path})}>
                 <Image source={{ uri: imageBaseUrl + 'w400/' + item.profile_path }} style={styles.imageStyle} />
+                </TouchableOpacity>
                 <Text style={styles.name}>{item.name}</Text>
                 <InfoItem title={'birthday'}  value={item?.birthday}/>
                 <InfoItem title={'department'}  value={item?.known_for_department}/>

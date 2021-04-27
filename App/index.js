@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import reducers from './reducers';
 import Splash from './Screens/Splash';
+import Images from './Screens/Images';
 import Home from './Screens/Home';
 import PersonDetails from './Screens/PersonDetails';
 import Navigation from './utils/Navigation'
@@ -19,6 +20,7 @@ const MainStack = () => {
       <Main.Screen name={'Splash'} component={Splash} />
       <Main.Screen name={'Home'} component={Home} />
       <Main.Screen name={'PersonDetails'} component={PersonDetails} />
+      <Main.Screen name={'Images'} component={Images} />
     </Main.Navigator>
   )
 }

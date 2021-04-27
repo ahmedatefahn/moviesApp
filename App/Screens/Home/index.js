@@ -1,11 +1,12 @@
 import React from 'react';
 import { Dimensions, View, Image,FlatList, Text, ScrollView,BackHandler, StatusBar, SafeAreaView ,TouchableOpacity} from "react-native";
-import { Container, Button, Item,Header, Icon } from 'native-base';
+import { Container, Button, Item,Header, Icon, Spinner } from 'native-base';
 import {getData} from '../../actions'
 import {connect} from 'react-redux'
 
 import MainHeader from '../../components/MainHeader';
 import HomeCard from './HomeCard';
+import Loader from '../../components/Loader';
 
  class Home extends React.Component {
  constructor(props){
@@ -34,6 +35,10 @@ onEndReached=()=>{
             <Container style={{ flex: 1 }}>
                 <SafeAreaView />
             <MainHeader type='main' />
+            {
+                this.props.Popular?.loading&&
+                <Loader />
+            }
                <FlatList 
                data={this.props.Popular?.data}
              renderItem={({item}) =>  <HomeCard item={item} />}
