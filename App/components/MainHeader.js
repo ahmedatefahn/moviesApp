@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Image, Text, TouchableOpacity, Linking } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import { Icon, Header, Spinner } from 'native-base'
 import { colors, boldFont } from '../utils/constants'
 import Navigation from '../utils/Navigation'
@@ -7,7 +7,7 @@ import Navigation from '../utils/Navigation'
 export default class MainHeader extends React.Component {
 
     render() {
-        let { type, title, download,onpress } = this.props
+        let { type, title, download, onpress } = this.props
         return (
             type == 'main' ?
                 <Header style={style.container} >

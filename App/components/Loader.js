@@ -7,7 +7,6 @@ import {colors} from '../utils/constants'
 export default class Loader extends React.Component {
 
     render() {
-        let { type, title, download, onpress } = this.props
         return (
             <Spinner 
             color={colors.gold} 

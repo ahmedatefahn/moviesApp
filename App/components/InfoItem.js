@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Image, Text, TouchableOpacity, Linking } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import { colors, mainFont, lightFont } from '../utils/constants'
 
 export default class InfoItem extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Dimensions, View, Image, StyleSheet, Alert, ScrollView, BackHandler, StatusBar, SafeAreaView, TouchableOpacity } from "react-native";
-import { Container, Button, Item, Header, Icon } from 'native-base';
-import { imageBaseUrl, baseUrl, apiKey } from '../utils/constants'
+import { StyleSheet, SafeAreaView } from "react-native";
+import { Container } from 'native-base';
+import { imageBaseUrl } from '../utils/constants'
 import MainHeader from '../components/MainHeader';
 import PhotoZoom from 'react-native-photo-zoom';
 import RNFetchBlob from 'rn-fetch-blob'

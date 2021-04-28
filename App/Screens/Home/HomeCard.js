@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { StyleSheet, View, Text, TouchableOpacity,  } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, } from 'react-native'
 import FastImage from 'react-native-fast-image'
 import { imageBaseUrl, boldFont, lightFont } from '../../utils/constants';
 import Navigation from '../../utils/Navigation';
@@ -31,11 +31,11 @@ export default class HomeCard extends PureComponent {
         )
     }
 }
-const style=StyleSheet.create({
-    container:{
-         flexDirection: 'row' 
+const style = StyleSheet.create({
+    container: {
+        flexDirection: 'row'
     },
-    image:{
-         width: 100, height: 100 
+    image: {
+        width: 100, height: 100
     }
 })
